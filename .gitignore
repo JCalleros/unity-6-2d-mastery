@@ -1,0 +1,49 @@
+# ============================================================
+# Unity generated folders
+# Supports multiple Unity projects inside this repository.
+# ============================================================
+
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+
+# ============================================================
+# IDE / editor generated files
+# ============================================================
+
+**/.vs/
+**/.idea/
+**/.vscode/
+
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ============================================================
+# Operating system files
+# ============================================================
+
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Crash / diagnostic files
+# ============================================================
+
+sysinfo.txt

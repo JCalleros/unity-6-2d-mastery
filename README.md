@@ -26,18 +26,21 @@ shipping.
 
 The repository contains multiple independent Unity projects.
 
-Each major course section is isolated so that learners can clone the repository
-and open the project for a specific section without depending on previous Unity
-projects.
+Each course module has its own Unity project. Lessons that belong to the same
+module build progressively on that project's contents.
+
+Repository paths are intentionally kept short to reduce filesystem path length,
+especially because Unity packages and generated caches can create deeply nested
+directories.
 
 ```text
 unity-6-2d-mastery/
 │
-├── docs/
+├── 00-unity-fundamentals/
+│   └── U6_00_UnityFundamentals/
 │
-├── 01-foundations/
-│   └── 00-unity-fundamentals/
-│       └── U6_00_UnityFundamentals/
+├── 01-programming-fundamentals/
+│   └── U6_01_CSharpFoundations/
 │
 └── ...
 ```

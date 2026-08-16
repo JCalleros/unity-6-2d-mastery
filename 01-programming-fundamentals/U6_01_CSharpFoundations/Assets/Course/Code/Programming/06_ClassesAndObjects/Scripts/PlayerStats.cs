@@ -16,7 +16,7 @@ public sealed class PlayerStats
         CurrentHealth = maximumHealth;
     }
 
-    public void TakeDagame(int amount)
+    public void TakeDamage(int amount)
     {
         if (amount <= 0)
         {

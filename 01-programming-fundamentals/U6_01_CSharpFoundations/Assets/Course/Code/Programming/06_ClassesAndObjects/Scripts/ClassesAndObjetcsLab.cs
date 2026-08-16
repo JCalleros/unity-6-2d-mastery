@@ -1,4 +1,3 @@
-using System.ComponentModel.Design;
 using UnityEngine;
 
 public sealed class ClassAndObjectsLab : MonoBehaviour
@@ -19,8 +18,8 @@ public sealed class ClassAndObjectsLab : MonoBehaviour
         PlayerStats player = new PlayerStats(playerMaximumHealth);
         PlayerStats boss = new PlayerStats(bossMaximumHealth);
 
-        player.TakeDagame(25);
-        boss.TakeDagame(100);
+        player.TakeDamage(25);
+        boss.TakeDamage(100);
 
         Debug.Log($"Player Health: {player.CurrentHealth}");
         Debug.Log($"Boss Health: {boss.CurrentHealth}");
@@ -31,7 +30,7 @@ public sealed class ClassAndObjectsLab : MonoBehaviour
         PlayerStats player = new PlayerStats(playerMaximumHealth);
         PlayerStats anotherReference = player;
 
-        anotherReference.TakeDagame(40);
+        anotherReference.TakeDamage(40);
 
         Debug.Log($"Original reference: {player.CurrentHealth}");
         Debug.Log($"Second reference: {anotherReference.CurrentHealth}");

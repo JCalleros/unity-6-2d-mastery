@@ -1,19 +1,22 @@
-public static class DamageMath
+namespace Course.Programming.ObjectConstructionAndComposition
 {
-    public static int Add(
-        int baseDamage,
-        int bonusDamage)
+    public static class DamageMath
     {
-        if (baseDamage < 0)
+        public static int Add(
+            int baseDamage,
+            int bonusDamage)
         {
-            baseDamage = 0;
-        }
+            if (baseDamage < 0)
+            {
+                baseDamage = 0;
+            }
 
-        if (bonusDamage < 0)
-        {
-            bonusDamage = 0;
-        }
+            if (bonusDamage < 0)
+            {
+                bonusDamage = 0;
+            }
 
-        return baseDamage + bonusDamage;
+            return baseDamage + bonusDamage;
+        }
     }
 }

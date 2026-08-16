@@ -1,34 +1,37 @@
-public sealed class Combatant
+namespace Course.Programming.ObjectConstructionAndComposition
 {
-    public string Name { get; private set; }
-    public PlayerStats Stats { get; private set; }
-
-    public Weapon Weapon { get; private set; }
-
-    public Combatant(
-        string name,
-        PlayerStats stats,
-        Weapon weapon)
+    public sealed class Combatant
     {
-        Name = name;
-        Stats = stats;
-        Weapon = weapon;
-    }
+        public string Name { get; private set; }
+        public PlayerStats Stats { get; private set; }
 
-    public void Attack(
-        Combatant target)
-    {
-        int damage = Weapon.CalculateDamage();
+        public Weapon Weapon { get; private set; }
 
-        target.Stats.TakeDamage(damage);
-    }
+        public Combatant(
+            string name,
+            PlayerStats stats,
+            Weapon weapon)
+        {
+            Name = name;
+            Stats = stats;
+            Weapon = weapon;
+        }
 
-    public void Attack(
-        Combatant target,
-        int bonusDamage)
-    {
-        int damage = Weapon.CalculateDamage(bonusDamage);
+        public void Attack(
+            Combatant target)
+        {
+            int damage = Weapon.CalculateDamage();
 
-        target.Stats.TakeDamage(damage);
+            target.Stats.TakeDamage(damage);
+        }
+
+        public void Attack(
+            Combatant target,
+            int bonusDamage)
+        {
+            int damage = Weapon.CalculateDamage(bonusDamage);
+
+            target.Stats.TakeDamage(damage);
+        }
     }
 }

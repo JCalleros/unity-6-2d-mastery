@@ -1,63 +1,66 @@
 using UnityEngine;
 
-public class ObjectConstructionLab :
-    MonoBehaviour
+namespace Course.Programming.ObjectConstructionAndComposition
 {
-    private void Start()
+    public class ObjectConstructionLab :
+        MonoBehaviour
     {
-        Weapon trainingSword = new Weapon();
-        
-        Weapon enemyAxe = 
-            new Weapon(
-                "Rusty Axe",
-                14);
-
-        PlayerStats playerStats = 
-            new PlayerStats(100);
-
-        PlayerStats enemyStats = 
-            new PlayerStats(50);
-
-        Combatant player =
-            new Combatant(
-                "Player",
-                playerStats,
-                trainingSword);
-
-        Combatant enemy =
-            new Combatant(
-                "Enemy",
-                enemyStats,
-                enemyAxe);
-
-        Debug.Log(
-            $"{player.Name} weapon: " +
-            $"{player.Weapon.Name}");
-
-        Debug.Log(
-            $"Normal damage: " +
-            $"{player.Weapon.CalculateDamage()}");
+        private void Start()
+        {
+            Weapon trainingSword = new Weapon();
             
-        Debug.Log(
-            $"{enemy.Name} health before: " +
-            $"{enemy.Stats.CurrentHealth}");
+            Weapon enemyAxe = 
+                new Weapon(
+                    "Rusty Axe",
+                    14);
 
-        player.Attack(enemy);
+            PlayerStats playerStats = 
+                new PlayerStats(100);
 
-        Debug.Log(
-            $"{enemy.Name} health after normal attack: " +
-            $"{enemy.Stats.CurrentHealth}");
+            PlayerStats enemyStats = 
+                new PlayerStats(50);
 
-        player.Attack(
-            enemy,
-            5);
+            Combatant player =
+                new Combatant(
+                    "Player",
+                    playerStats,
+                    trainingSword);
 
-        Debug.Log(
-            $"{enemy.Name} health after bonus attack: " +
-            $"{enemy.Stats.CurrentHealth}");
+            Combatant enemy =
+                new Combatant(
+                    "Enemy",
+                    enemyStats,
+                    enemyAxe);
 
-        Debug.Log(
-            $"Negative utility tests: " +
-            $"{DamageMath.Add(-10, 4)}");
+            Debug.Log(
+                $"{player.Name} weapon: " +
+                $"{player.Weapon.Name}");
+
+            Debug.Log(
+                $"Normal damage: " +
+                $"{player.Weapon.CalculateDamage()}");
+                
+            Debug.Log(
+                $"{enemy.Name} health before: " +
+                $"{enemy.Stats.CurrentHealth}");
+
+            player.Attack(enemy);
+
+            Debug.Log(
+                $"{enemy.Name} health after normal attack: " +
+                $"{enemy.Stats.CurrentHealth}");
+
+            player.Attack(
+                enemy,
+                5);
+
+            Debug.Log(
+                $"{enemy.Name} health after bonus attack: " +
+                $"{enemy.Stats.CurrentHealth}");
+
+            Debug.Log(
+                $"Negative utility tests: " +
+                $"{DamageMath.Add(-10, 4)}");
+        }
     }
 }

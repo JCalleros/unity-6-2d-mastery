@@ -1,38 +1,41 @@
-public sealed class Weapon
+namespace Course.Programming.ObjectConstructionAndComposition
 {
-    public string Name { get; private set; }
-    public int BaseDamage { get; private set; }
-
-    public Weapon()
-        : this("Training Sword", 10)
+    public sealed class Weapon
     {
-    }
+        public string Name { get; private set; }
+        public int BaseDamage { get; private set; }
 
-    public Weapon(
-        string name,
-        int baseDamage)
-    {
-        if (baseDamage < 0)
+        public Weapon()
+            : this("Training Sword", 10)
         {
-            baseDamage = 0;
         }
 
-        Name = name;
-        BaseDamage = baseDamage;
-    }
+        public Weapon(
+            string name,
+            int baseDamage)
+        {
+            if (baseDamage < 0)
+            {
+                baseDamage = 0;
+            }
 
-    public int CalculateDamage()
-    {
-        return DamageMath.Add(
-            BaseDamage,
-            0);
-    }
+            Name = name;
+            BaseDamage = baseDamage;
+        }
 
-    public int CalculateDamage(
-        int bonusDamage)
-    {
-        return DamageMath.Add(
-            BaseDamage,
-            bonusDamage);
+        public int CalculateDamage()
+        {
+            return DamageMath.Add(
+                BaseDamage,
+                0);
+        }
+
+        public int CalculateDamage(
+            int bonusDamage)
+        {
+            return DamageMath.Add(
+                BaseDamage,
+                bonusDamage);
+        }
     }
 }
